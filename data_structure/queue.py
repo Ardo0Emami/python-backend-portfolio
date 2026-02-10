@@ -2,6 +2,7 @@ from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
+
 # Queue class
 class Queue(Generic[T]):
     def __init__(self) -> None:

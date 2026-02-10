@@ -1,6 +1,7 @@
 import unittest
 from my_class_basics import Person
 
+
 class TestPerson(unittest.TestCase):
     def test_birthday_increments_age(self):
         p = Person("Test", 30)
@@ -18,5 +19,6 @@ class TestPerson(unittest.TestCase):
         self.assertIn("Test", msg)
         self.assertIn("25", msg)
 
-if __name__  == "__main__":
-    unittest.main()          
+
+if __name__ == "__main__":
+    unittest.main()

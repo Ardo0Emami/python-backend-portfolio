@@ -1,9 +1,23 @@
-.mypy_cache/
+# Python
 __pycache__/
 *.pyc
+
+# Virtual environments
 .venv/
 venv/
-.vscode/
-.idea/
+
+# Type checking / linting
+.mypy_cache/
 .coverage
 htmlcov/
+
+# Databases
+*.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Environment files
+.env
+**/.env

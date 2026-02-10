@@ -1,11 +1,13 @@
 import unittest
-from doubly_linked_list import DoublyLinkedList, DoublyNode
+from doubly_linked_list import DoublyLinkedList
 
 
 class TestDoublyLinkedList(unittest.TestCase):
     def test_add_front_and_len(self) -> None:
         dll = DoublyLinkedList[int]()
-        dll.add_front(1); dll.add_front(2); dll.add_front(3)
+        dll.add_front(1)
+        dll.add_front(2)
+        dll.add_front(3)
 
         self.assertEqual(len(dll), 3)
 
@@ -19,7 +21,9 @@ class TestDoublyLinkedList(unittest.TestCase):
 
     def test_add_back_and_len(self) -> None:
         dll = DoublyLinkedList[int]()
-        dll.add_back(1); dll.add_back(2); dll.add_back(3)
+        dll.add_back(1)
+        dll.add_back(2)
+        dll.add_back(3)
 
         self.assertEqual(len(dll), 3)
 
@@ -35,8 +39,11 @@ class TestDoublyLinkedList(unittest.TestCase):
         dll = DoublyLinkedList[int]()
         self.assertIsNone(dll.find(123))  # empty
 
-        dll.add_front(5); dll.add_front(6); dll.add_front(5)  # 5,6,5 (head→tail)
-        
+        dll.add_front(5)
+        dll.add_front(6)
+        dll.add_front(5)
+        # 5,6,5 (head→tail)
+
         n = dll.find(5)
         self.assertIsNotNone(n)
         assert n is not None
@@ -45,7 +52,11 @@ class TestDoublyLinkedList(unittest.TestCase):
 
     def test_remove(self) -> None:
         dll = DoublyLinkedList[int]()
-        dll.add_front(5); dll.add_front(6); dll.add_front(7); dll.add_front(5)  # 5, 7, 6, 5 (head→tail)
+        dll.add_front(5)
+        dll.add_front(6)
+        dll.add_front(7)
+        dll.add_front(5)
+        # 5, 7, 6, 5 (head→tail)
         dll.remove(5)
         dll.remove(5)
         self.assertIsNotNone(dll.head)
@@ -60,7 +71,11 @@ class TestDoublyLinkedList(unittest.TestCase):
     def test_contains_iter(self) -> None:
         dll = DoublyLinkedList[int]()
         self.assertFalse(9 in dll)
-        dll.add_front(4); dll.add_front(6); dll.add_front(7); dll.add_front(5)  # 5, 7, 6, 4 (head→tail)
+        dll.add_front(4)
+        dll.add_front(6)
+        dll.add_front(7)
+        dll.add_front(5)
+        # 5, 7, 6, 4 (head→tail)
         self.assertFalse(9 in dll)
         self.assertTrue(5 in dll)
         self.assertTrue(4 in dll)
@@ -76,6 +91,7 @@ class TestDoublyLinkedList(unittest.TestCase):
         self.assertIn("'a'", s)
         self.assertIn("'b'", s)
         self.assertTrue(s.endswith("])"))
+
 
 if __name__ == "__main__":
     unittest.main()

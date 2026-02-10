@@ -1,6 +1,7 @@
 import unittest
 from linked_list import LinkedList
 
+
 class TestLinkedList(unittest.TestCase):
     def test_add_front_and_len(self):
         lst = LinkedList[int]()
@@ -64,7 +65,7 @@ class TestLinkedList(unittest.TestCase):
         lst = LinkedList[int]()
         for x in [1, 2, 3]:
             lst.add_back(x)
-        
+
         lst.clear()
         self.assertEqual(len(lst), 0)
         self.assertEqual(lst.head, None)
@@ -82,6 +83,7 @@ class TestLinkedList(unittest.TestCase):
             lst.add_back(x)
 
         self.assertEqual(lst.__repr__(), "LinkedList([1, 2, 3])")
+
 
 if __name__ == "__main__":
     unittest.main()

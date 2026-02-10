@@ -1,6 +1,7 @@
 import unittest
 from queue import Queue
 
+
 class TestQueue(unittest.TestCase):
     def test_enqueue_dequeue(self):
         q = Queue[int]()
@@ -22,12 +23,12 @@ class TestQueue(unittest.TestCase):
         q = Queue[int]()
         with self.assertRaises(IndexError):
             q.dequeue()
-            
 
     def test_peek_empty_raises(self):
         q = Queue[int]()
         with self.assertRaises(IndexError):
             q.peek()
+
 
 if __name__ == "__main__":
     unittest.main()
