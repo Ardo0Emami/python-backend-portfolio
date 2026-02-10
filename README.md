@@ -59,7 +59,7 @@ The emphasis is on explicit boundaries, predictable behavior, and production-ori
 
 ```bash
 python3 -m unittest discover -s data_structure -p 'test_*.py'
-python3 -m unittest discover -s accounting_api/tests
+pytest -q accounting_api/tests
 ```
 
 ---
