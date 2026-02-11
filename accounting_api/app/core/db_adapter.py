@@ -19,10 +19,7 @@ def get_db() -> Generator[Session, None, None]:
     """
     FastAPI database dependency defining the transactional boundary
     of the web application.
-
-    NOTE:
     We intentionally do NOT use `session_scope(SessionLocal)` here.
-    See architecture notes for rationale.
     """
     db: Session = SessionLocal()
     try:
