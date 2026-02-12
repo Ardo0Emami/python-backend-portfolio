@@ -24,6 +24,15 @@ class TestBaseSortedList(unittest.TestCase):
         lst.add("d")
         self.assertEqual(list(lst), ["a", "c", "d"])
 
+    def test_reverse(self):
+        def compare(x: int, y: int) -> int:
+            return x - y
+
+        lst = BaseSortedList(compare, reverse=True)
+        for v in [3, 1, 2]:
+            lst.add(v)
+        self.assertEqual(list(lst), [3, 2, 1])
+
 
 if __name__ == "__main__":
     unittest.main()
