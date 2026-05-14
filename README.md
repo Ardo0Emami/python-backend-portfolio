@@ -6,11 +6,13 @@ This repository contains a small set of focused backend projects, each designed 
 demonstrate clean structure, correctness, and maintainable design in modern Python.
 The emphasis is on explicit boundaries, predictable behavior, and production-oriented practices.
 
+> **Active work:** My current focus has expanded into a dedicated repository — **[accounting-data-platform](https://github.com/Ardo0Emami/accounting-data-platform)** — which extends the Accounting API below into a four-layer data platform (OLTP, ingestion, warehouse, semantic + AI) on AWS, Snowflake, and dbt. The projects in this portfolio remain available as standalone references.
+
 ---
 
 ## Projects
 
-- **[Accounting API](./accounting_api/)**  
+- **[Accounting API](./accounting_api/)** — *being extended in [accounting-data-platform](https://github.com/Ardo0Emami/accounting-data-platform)*  
   A realistic accounting backend built with FastAPI and SQLAlchemy.  
   Focus areas include layered architecture, explicit transaction handling,
   lightweight authentication, structured logging, and isolated testing.
